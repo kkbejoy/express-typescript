@@ -1,10 +1,9 @@
-import { NextFunction, Request, Response, Router } from "express";
-import { getUsers } from "../handlers/users";
+import { Router } from "express";
+import { createUser, getUsers } from "../handlers/users";
 
 const router = Router();
+
 router.get("/", getUsers);
-// router.get("/:id", () => {
 
-// });
-
+router.post("/", createUser);
 export default router;
